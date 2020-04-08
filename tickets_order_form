@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- header starts -->
+    <header>
+        <img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+        <h2>The Halloween Store</h2>
+        <h3>For the little Goblin in all of us!</h3>
+    </header>
+
+    <!-- navigation starts -->
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="about_us.html">About Us</a>
+                <ul>
+                    <li><a href="our_history.html">Our History</a></li>
+                    <li><a href="our_team.html">Our Team</a></li>
+                </ul>
+            </li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tickets_order_form.html">Party Tickets</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- main content starts -->
+    <main>
+        <!-- sidebar starts -->
+        <aside>
+            <ul>
+                <li><a href="products/props.html">Props</a></li>
+                <li><a href="products/costumes.html">Costumes</a></li>
+                <li><a href="products/special.html">Special FX</a></li>
+                <li><a href="products/masks.html">Masks</a></li>
+            </ul>
+        </aside>
+
+        <!-- the main section of the content starts -->
+        <section>
+            <h1>Buy Tickets for a Halloween Party</h1>
+            <form name="order_form" method="post" action="place_order.html">
+                <fieldset>
+                    <legend>Member Information</legend>
+                    <label for="E-mail" style="text-align: center">E-Mail:</label>
+                    <input type="text" name="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="E-Mail" required><br>
+
+                    <label for="FirstName">First Name:</label>
+                    <input type="text" name="FirstName" id="FirstName" required><br>
+
+                    <label for="LastName">Last Name:</label>
+                    <input type="text" name="LastName" id="LastName" required><br>
+
+                    <label for="LastName">Address:</label>
+                    <input type="text" name="Address" id="Address" required><br>
+
+                    <label for="City">City:</label>
+                    <input type="text" name="City" id="City" required><br>
+
+                    <label for="Province">Province:</label>
+                    <input type="text" name="Province" id="Province" maxlength="2" required placeholder="Two Character Code e.g. ON" title="Two Character Code e.g. ON"><br>
+
+                    <label for="PostalCode">Postal Code:</label>
+                    <input type="text" name="PostalCode" id="PostalCode" required placeholder="6 characters" title="Six Alphanumeric Characters"><br>
+
+
+                    <label for="PostalCode">Phone Number:</label>
+                    <input type="tel" name="Phone" id="Phone" required placeholder="999-999-9999" pattern="Must be in 999-999-999 format"><br>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ordering Information</legend>
+                    <label for="Party">Party:</label>
+
+                    <select name="Party" id="Party">
+                           <option>Fang-tastic Feast</option>
+                           <option>Fright Night</option>
+                           <option>Ghouls'Night Out</option>
+                           <option>Monster Mash</option>
+                        </Select>
+                    <br>
+
+                    <label for="Order Type">Order Type:</label>
+                    <Select name="Order Type" id="Order Type">
+                        <option>Member Package</option>
+                        <option>Donor Package</option>
+                        <option>Single Tickets</option>
+                     </select>
+
+                    <br>
+
+                    <label for="NumberOfTickets">Number Of Tickets:</label>
+                    <input type="text" name="NumberOfTickets" id="NumberOfTickets" placeholder="Number of single tickets"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <input type="radio" name="PaymentMethod" id="PaymentMethod"> Bill Me &nbsp;
+                    <input type="radio" name="PaymentMethod" id="PaymentMethod"> Credit Card
+                </fieldset>
+
+                <fieldset>
+                    <legend>Credit Card Information</legend>
+                    <label for="Card Type">Card Type:</label>
+                    <Select name="Card Type" id="Card Type">
+   <option>Visa</option>
+   <option>Master Card</option>
+   <option>Discover</option>
+</select>
+                    <br>
+
+                    <label for="Card Number">Card Number:</label>
+                    <input type="tel" name="Card Number" id="Card Number" required placeholder="16 digits" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" title="Must be in 16 digits format"><br>
+                    <label for="Expiration Date">Expiration Date:</label>
+
+                    <select name="Months" id="Months">
+                     <option>January</option>
+                     <option>February</option>
+                     <option>March</option>
+                     <option>April</option>
+                     <option>May</option>
+                     <option>June</option>
+                     <option>July</option>
+                     <option>August</option>
+                     <option>September</option>
+                     <option>October</option>
+                     <option>November</option>
+                     <option>December</option>
+                  </select>
+
+                    <Select name="Years" id="Years">
+                     <option>2015</option>
+                     <option>2016</option>
+                     <option>2017</option>
+                     <option>2018</option>
+                     <option>2019</option>
+                  </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Submit Your Order</legend>
+
+                    <input type="submit" id="submit" value="Submit">
+                    <input type="Submit" id="Reset_Fields" value="Reset Fields">
+
+                    <!-- the order form goes here -->
+
+        </section>
+    </main>
+
+    <!-- footer starts -->
+    <footer>
+        <p>&copy; 2020 - Hetang Anishkumar Bhavsar</p>
+    </footer>
+</body>
+
+</html>
